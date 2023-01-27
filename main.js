@@ -34,9 +34,7 @@ function appendData(data) {
 
 
 const asyncForPete = async () => {
-    
     try {
-       
         const res = await fetch('./db.json');
         const data = await res.json();
         appendData(data);
@@ -58,4 +56,6 @@ function resAfter2Sec() {
         }, 10000)
     })
 }
+
+
 resAfter2Sec();
