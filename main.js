@@ -3,7 +3,7 @@
 function appendData(data) {
     const tbl = document.createElement("table");
     const tblBody = document.createElement("tbody");
-
+    
     for (let i = 0; i < data.length; i++) {
         // table data and table row creation
         const row = document.createElement("tr");
@@ -14,7 +14,7 @@ function appendData(data) {
         const cellText = document.createTextNode(data[i].fullName);
         const cellText2 = document.createTextNode(data[i].company);
         const cellText3 = document.createTextNode(data[i].id);
-
+        //putting data into table
         nameOfChad.appendChild(cellText);
         companyOfChad.appendChild(cellText2);  
         idOfChad.appendChild(cellText3);
@@ -24,14 +24,11 @@ function appendData(data) {
         row.appendChild(companyOfChad);
 
         tblBody.appendChild(row);
-
-      }
+      };
       tbl.appendChild(tblBody);
       document.body.appendChild(tbl);
       tbl.setAttribute("border", "2");
-    }
-
-
+    };
 
 const asyncForPete = async () => {
     try {
@@ -47,7 +44,6 @@ const asyncForPete = async () => {
     }
 }
 
-
 function resAfter2Sec() {
     return new Promise( resolve => {
         setTimeout( () => {
@@ -56,6 +52,5 @@ function resAfter2Sec() {
         }, 10000)
     })
 }
-
 
 resAfter2Sec();
