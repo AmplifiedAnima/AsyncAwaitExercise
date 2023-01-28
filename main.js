@@ -3,7 +3,7 @@
 function appendData(data) {
     const tbl = document.createElement("table");
     const tblBody = document.createElement("tbody");
-    
+
     for (let i = 0; i < data.length; i++) {
         // table data and table row creation
         const row = document.createElement("tr");
@@ -40,14 +40,14 @@ const asyncForPete = async () => {
         console.log(error)
     }
     finally{
-        console.log('data has been fetched - like a chad!')
+        console.log(' finally  -> data has been fetched - like a chad!')
     }
 }
 
 function resAfter2Sec() {
     return new Promise( resolve => {
         setTimeout( () => {
-            console.log(resolve);
+            console.log(`data has been fetched ;pp`);
             asyncForPete();
         }, 10000)
     })
