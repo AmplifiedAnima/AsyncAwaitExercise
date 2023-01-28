@@ -37,10 +37,10 @@ const asyncForPete = async () => {
         appendData(data);
     }
     catch(error){
-        console.log(error)
+        console.log(error);
     }
     finally{
-        console.log(' finally  -> data has been fetched - like a chad!')
+        console.log(' finally  -> data has been fetched - like a chad!');
     }
 }
 
@@ -50,7 +50,7 @@ function resAfter2Sec() {
             console.log(`data has been fetched ;pp`);
             asyncForPete();
         }, 10000)
-    })
-}
+    });
+};
 
 resAfter2Sec();
